@@ -251,7 +251,7 @@
                 localStorage["search"] = document.getElementById('partyID').value;
             }
         });
-        if (window.location.href.indexOf("?party=") > 5 && (localStorage["host"] == "false" || localStorage["host"] == false)) {
+        if ((window.location.href.indexOf("?party=") > 5 || (localStorage["host"] == "false" || localStorage["host"] == false)) {
             localStorage["host"] = false;
             localStorage["lastFM"] = "";
             localStorage["partyid"] = "";
@@ -278,7 +278,6 @@
                 }
             });
         }
-        //initialSettings();
     }
     catch (exception) {
         console.log("TEST");
